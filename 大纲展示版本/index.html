@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>虚拟品牌创始人&电商网站构建课程</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background: #f5f7fa;
+        padding: 20px;
+      }
+      .container {
+        max-width: 1400px;
+        margin: 0 auto;
+        background: white;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+        overflow-x: auto;
+      }
+      h1,
+      h2 {
+        text-align: center;
+        color: #2c3e50;
+        margin-bottom: 20px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+      h2 {
+        font-size: 1.4em;
+        color: #666;
+        margin-bottom: 40px;
+      }
+      .legend {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+      }
+      .legend-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 0.9em;
+      }
+      .legend-color {
+        width: 16px;
+        height: 16px;
+        border-radius: 4px;
+      }
+      .coding-color {
+        background: #e3f2fd;
+        border: 1px solid #1976d2;
+      }
+      .ai-color {
+        background: #f3e5f5;
+        border: 1px solid #7b1fa2;
+      }
+      .soft-color {
+        background: #e8f5e9;
+        border: 1px solid #2e7d32;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        font-size: 0.9em;
+        table-layout: fixed;
+      }
+      th {
+        background: #1a73e8;
+        color: white;
+        padding: 12px 8px;
+        text-align: left;
+        font-weight: 500;
+        position: sticky;
+        top: 0;
+        white-space: nowrap;
+      }
+      td {
+        padding: 12px 8px;
+        border-bottom: 1px solid #e1e8ed;
+        vertical-align: top;
+        height: 80px;
+        min-height: 80px;
+      }
+      tr {
+        height: 80px;
+      }
+      tr:nth-child(even) {
+        background: #f8f9fa;
+      }
+      tr:hover {
+        background: #f1f3f4;
+      }
+      .course-num {
+        width: 40px;
+        text-align: center;
+        font-weight: bold;
+        color: #1a73e8;
+      }
+      .course-title {
+        font-weight: 500;
+        color: #2c3e50;
+      }
+      .course-content {
+        color: #666;
+      }
+      .skills {
+        color: #666;
+      }
+      .outcome {
+        color: #2e7d32;
+      }
+      .skill-tag {
+        display: inline-block;
+        padding: 2px 8px;
+        border-radius: 4px;
+        margin: 2px;
+        font-size: 0.85em;
+        white-space: nowrap;
+      }
+      .coding-skill {
+        background: #e3f2fd;
+        color: #1976d2;
+      }
+      .ai-skill {
+        background: #f3e5f5;
+        color: #7b1fa2;
+      }
+      .soft-skill {
+        background: #e8f5e9;
+        color: #2e7d32;
+      }
+      .skill-group {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        margin-bottom: 4px;
+      }
+      .skill-group:last-child {
+        margin-bottom: 0;
+      }
+      .skill-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
+      }
+      .core-abilities {
+        margin-top: 40px;
+        padding: 20px;
+        background: #f8f9fa;
+        border-radius: 8px;
+      }
+      .core-abilities h3 {
+        color: #2c3e50;
+        margin-bottom: 15px;
+      }
+      .core-abilities ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+      .core-abilities li {
+        flex: 1;
+        min-width: 200px;
+        padding: 10px;
+        background: white;
+        border-radius: 6px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      }
+      .course-features {
+        margin-top: 40px;
+        padding: 20px;
+        background: #f8f9fa;
+        border-radius: 8px;
+      }
+      .course-features h3 {
+        color: #2c3e50;
+        margin-bottom: 15px;
+      }
+      .course-features ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+      .course-features li {
+        flex: 1;
+        min-width: 200px;
+        padding: 10px;
+        background: white;
+        border-radius: 6px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      }
+      @media (max-width: 768px) {
+        .container {
+          padding: 10px;
+        }
+        table {
+          font-size: 0.8em;
+        }
+        td,
+        th {
+          padding: 8px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>虚拟品牌创始人&电商网站构建课程</h1>
+      <h2>家长快速了解课程大纲</h2>
+
+      <div class="legend">
+        <div class="legend-item">
+          <div class="legend-color coding-color"></div>
+          <span>编程技能</span>
+        </div>
+        <div class="legend-item">
+          <div class="legend-color ai-color"></div>
+          <span>AI应用</span>
+        </div>
+        <div class="legend-item">
+          <div class="legend-color soft-color"></div>
+          <span>综合素养</span>
+        </div>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 15%">课程主题</th>
+            <th style="width: 20%">内容提要</th>
+            <th style="width: 28%">本节必学核心技能</th>
+            <th style="width: 26%">每节课的成果作品</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="course-title">1. ChatGPT构建个人品牌</td>
+            <td class="course-content">
+              利用ChatGPT生成品牌定位、领域知识与品牌故事创意。
+            </td>
+            <td class="skills">
+              <div class="skill-group">
+                <div class="skill-row">
+                  <span class="skill-tag ai-skill">ChatGPT学习领域知识</span>
+                  <span class="skill-tag ai-skill">prompt提示词设计</span>
+                </div>
+                <div class="skill-row">
+                  <span class="skill-tag soft-skill">品牌定位</span>
+                  <span class="skill-tag soft-skill">品牌故事创意</span>
+                </div>
+              </div>
+            </td>
+            <td class="outcome">个人品牌定位说明书、品牌故事、精华介绍</td>
+          </tr>
+          <tr>
+            <td class="course-title">2. HTML网页基础</td>
+            <td class="course-content">
+              学习HTML网页制作，亲自手写个人品牌介绍页面。
+            </td>
+            <td class="skills">
+              <div class="skill-group">
+                <div class="skill-row">
+                  <span class="skill-tag coding-skill">HTML基础语法</span>
+                  <span class="skill-tag coding-skill">网页结构设计</span>
+                  <span class="skill-tag coding-skill">调试方法</span>
+                </div>
+              </div>
+            </td>
+            <td class="outcome">亲手手写的HTML个人网站介绍页面</td>
+          </tr>
+          <tr>
+            <td class="course-title">3. AI生成多媒体作品</td>
+            <td class="course-content">
+              使用AI工具快速生成图片、音乐、视频、绘本等虚拟商品。
+            </td>
+            <td class="skills">
+              <div class="skill-group">
+                <div class="skill-row">
+                  <span class="skill-tag ai-skill">AI图像生成</span>
+                  <span class="skill-tag ai-skill">AI音乐生成</span>
+                  <span class="skill-tag ai-skill">AI视频生成</span>
+                  <span class="skill-tag ai-skill">多媒体整合</span>
+                </div>
+              </div>
+            </td>
+            <td class="outcome">
+              一整套个人数字创意作品（AI生图、视频、音乐、绘本）
+            </td>
+          </tr>
+          <tr>
+            <td class="course-title">4. AI辅助电商网站建设</td>
+            <td class="course-content">
+              利用Cursor工具高效制作并优化电商网站。
+            </td>
+            <td class="skills">
+              <div class="skill-group">
+                <div class="skill-row">
+                  <span class="skill-tag coding-skill">Cursor AI编程</span>
+                  <span class="skill-tag coding-skill">商业网页搭建</span>
+                  <span class="skill-tag coding-skill">组件设计</span>
+                  <span class="skill-tag coding-skill">用户体验优化</span>
+                </div>
+              </div>
+            </td>
+            <td class="outcome">AI辅助编程构建的精美个人商业网站</td>
+          </tr>
+          <tr>
+            <td class="course-title">5. 市场调研问卷设计</td>
+            <td class="course-content">
+              学习如何设计调查问卷并分析市场数据，明确消费者需求。
+            </td>
+            <td class="skills">
+              <div class="skill-group">
+                <div class="skill-row">
+                  <span class="skill-tag ai-skill">AI问卷优化</span>
+                  <span class="skill-tag ai-skill">manus AI市场调研</span>
+                </div>
+                <div class="skill-row">
+                  <span class="skill-tag soft-skill">问卷设计</span>
+                  <span class="skill-tag soft-skill">调查数据分析处理</span>
+                  <span class="skill-tag soft-skill">可视化呈现</span>
+                </div>
+              </div>
+            </td>
+            <td class="outcome">个人制作的问卷及数据分析报告</td>
+          </tr>
+          <tr>
+            <td class="course-title">6. 开源世界GitHub</td>
+            <td class="course-content">
+              了解Git、GitHub，将网站发布到互联网，进行版本控制。
+            </td>
+            <td class="skills">
+              <div class="skill-group">
+                <div class="skill-row">
+                  <span class="skill-tag coding-skill">Git基础操作</span>
+                  <span class="skill-tag coding-skill">GitHub管理</span>
+                  <span class="skill-tag coding-skill">网站发布</span>
+                  <span class="skill-tag coding-skill">URL分享</span>
+                </div>
+              </div>
+            </td>
+            <td class="outcome">网站推送到GitHub仓库并在互联网上访问</td>
+          </tr>
+          <tr>
+            <td class="course-title">7. 真实访谈AI记录</td>
+            <td class="course-content">
+              学习真实采访店主，利用AI生成访谈纪要和策略建议。
+            </td>
+            <td class="skills">
+              <div class="skill-group">
+                <div class="skill-row">
+                  <span class="skill-tag ai-skill">AI语音转文字</span>
+                  <span class="skill-tag ai-skill">AI分析内容整理纪要</span>
+                </div>
+                <div class="skill-row">
+                  <span class="skill-tag soft-skill">访谈技巧</span>
+                  <span class="skill-tag soft-skill">销售策略优化</span>
+                </div>
+              </div>
+            </td>
+            <td class="outcome">一次个人线上访谈+AI生成访谈纪要汇总</td>
+          </tr>
+          <tr>
+            <td class="course-title">8. 订单系统构建数据存储</td>
+            <td class="course-content">
+              构建个人电商订单提交系统，学习数据库的基本应用。
+            </td>
+            <td class="skills">
+              <div class="skill-group">
+                <div class="skill-row">
+                  <span class="skill-tag coding-skill">HTML表单设计</span>
+                  <span class="skill-tag coding-skill">数据提交与存储</span>
+                  <span class="skill-tag coding-skill">云数据库应用</span>
+                  <span class="skill-tag coding-skill">数据检索</span>
+                </div>
+              </div>
+            </td>
+            <td class="outcome">使用云数据库构建的个人电商网站订单提交系统</td>
+          </tr>
+          <tr>
+            <td class="course-title">9. 网络请求与埋点分析</td>
+            <td class="course-content">
+              学习通过JavaScript实现用户行为跟踪与AB测试优化网站表现。
+            </td>
+            <td class="skills">
+              <div class="skill-group">
+                <div class="skill-row">
+                  <span class="skill-tag coding-skill">网络请求基础</span>
+                  <span class="skill-tag coding-skill">JS埋点实现</span>
+                </div>
+                <div class="skill-row">
+                  <span class="skill-tag soft-skill">用户体验路径分析实战</span>
+                  <span class="skill-tag soft-skill">AB测试分析</span>
+                </div>
+              </div>
+            </td>
+            <td class="outcome">网站埋点策略与用户体验路径分析实战</td>
+          </tr>
+          <tr>
+            <td class="course-title">10. 消费者心理销售对策实战</td>
+            <td class="course-content">
+              运用AI提前准备针对不同买家的销售话术和策略，通过模拟训练提升销售技巧。
+            </td>
+            <td class="skills">
+              <div class="skill-group">
+                <div class="skill-row">
+                  <span class="skill-tag ai-skill">AI销售策略生成</span>
+                  <span class="skill-tag ai-skill">AI数字人模拟训练</span>
+                </div>
+                <div class="skill-row">
+                  <span class="skill-tag soft-skill">消费者心理分析</span>
+                  <span class="skill-tag soft-skill">针对性销售策略</span>
+                </div>
+              </div>
+            </td>
+            <td class="outcome">针对不同消费心理的销售对策实战</td>
+          </tr>
+          <tr>
+            <td class="course-title">11. 项目展示销售实战</td>
+            <td class="course-content">
+              真实展示个人品牌、网站和商品，线上网站商品展示及最终评选。
+            </td>
+            <td class="skills">
+              <div class="skill-group">
+                <div class="skill-row">
+                  <span class="skill-tag soft-skill">演讲技巧</span>
+                  <span class="skill-tag soft-skill">产品展示</span>
+                  <span class="skill-tag soft-skill">即兴应变</span>
+                  <span class="skill-tag soft-skill">销售实践</span>
+                </div>
+              </div>
+            </td>
+            <td class="outcome">最终成果日的线上网站商品展示及最终评选</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="core-abilities">
+        <h3>学生将获得的核心能力</h3>
+        <ul>
+          <li><strong>创意表达能力</strong><br />品牌故事创作与产品创意表达</li>
+          <li><strong>技术应用能力</strong><br />从零构建网页与电商系统</li>
+          <li>
+            <strong>AI工具应用能力</strong><br />高效使用AI提升创作与工作效率
+          </li>
+          <li><strong>数据驱动决策</strong><br />基于市场数据进行分析决策</li>
+          <li>
+            <strong>销售与沟通能力</strong
+            ><br />针对不同买家精准制定沟通与销售策略
+          </li>
+        </ul>
+      </div>
+
+      <div class="course-features">
+        <h3>课程特色</h3>
+        <ul>
+          <li><strong>项目驱动学习</strong><br />真实品牌和电商项目全程实践</li>
+          <li><strong>AI与技术融合</strong><br />AI工具与编程能力无缝结合</li>
+          <li>
+            <strong>真实模拟训练</strong
+            ><br />角色扮演与真实情境模拟，提升实际应变能力
+          </li>
+          <li>
+            <strong>成果导向教学</strong
+            ><br />以最终的实际成果与市场反馈评估学习效果
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
